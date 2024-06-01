@@ -1,24 +1,3 @@
-# vue-cli
-
-## Project setup
-```
-npm install
-```
-
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+- News, Ask, Jobs get api 추가하기
+  - https://api.hnpwa.com/v0/news/1.json
+- News, Ask, Jobs 컴포넌트에서 api get 결과 뿌려주기
