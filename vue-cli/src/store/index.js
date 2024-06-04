@@ -10,6 +10,7 @@ export const store = createStore({
       ask: [],
       user: {},
       item: {},
+      loading: true,
     }
   },
   getters: {
