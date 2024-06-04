@@ -11,8 +11,8 @@ const routes = [
     { path: '/news', name: 'news', component: NewsView },
     { path: '/ask', name: 'ask', component: AskView },
     { path: '/jobs', name: 'jobs', component: JobsView },
-    { path: '/item/:id', component: ItemView },
-    { path: '/user/:id', component: UserView },
+    { path: '/item/:id', name: 'item', component: ItemView },
+    { path: '/user/:id', name: 'user', component: UserView },
 ];
 
 export const router = createRouter({

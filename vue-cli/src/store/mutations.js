@@ -1,17 +1,17 @@
 export default {
   SET_NEWS(state, news) {
-    return state.news = news;
+    state.news = news;
   },
   SET_JOBS(state, jobs) {
-    return state.jobs = jobs;
+    state.jobs = jobs;
   },
   SET_ASK(state, ask) {
-    return state.ask = ask;
+    state.ask = ask;
   },
   SET_USER(state, user) {
-    return state.user = user;
+    state.user = user;
   },
   SET_ITEM(state, item) {
-    return state.item = item;
+    state.item = item;
   }
 }

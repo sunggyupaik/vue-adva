@@ -1,33 +1,29 @@
 <template>
   <div>
     <section>
-      <div class="user-container">
-        <div>
-          <i class="fa-solid fa-user"></i>
-        </div>
-        <div class="user-description">
-          <router-link v-bind:to="`/user/${fetchedItem.user}`">
-            {{ fetchedItem.user }}
-          </router-link>
-          <div class="time">
-            {{ fetchedItem.time_ago }}
-          </div>
-        </div>
-      </div>
-      <h2>{{ fetchedItem.title }}</h2>
+      <user-profile v-bind:info="itemInfo">
+        <template v-slot:username>{{ itemInfo.user }}</template>
+        <template v-slot:time>{{ 'Posted ' + itemInfo.time_ago }}</template>
+      </user-profile>
     </section>
-    
-    <section v-html="fetchedItem.content">
+    <section>
+      <h2>{{ itemInfo.title }}</h2>
+    </section>
+    <section>
+      <div v-html="itemInfo.content"></div>
     </section>
   </div>
 </template>
 
 <script>
-import { mapGetters } from 'vuex';
+import UserProfile from '../components/UserProfile.vue';
 
 export default {
+  components: { UserProfile },
   computed: {
-    ...mapGetters(['fetchedItem'])
+    itemInfo() {
+      return this.$store.state.item;
+    },
   },
   created() {
     const itemId = this.$route.params.id;
