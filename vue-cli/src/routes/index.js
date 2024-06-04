@@ -8,9 +8,9 @@ import UserView from '../views/UserView.vue';
 
 const routes = [
     { path: '/', redirect: '/news' },
-    { path: '/news', component: NewsView },
-    { path: '/ask', component: AskView },
-    { path: '/jobs', component: JobsView },
+    { path: '/news', name: 'news', component: NewsView },
+    { path: '/ask', name: 'ask', component: AskView },
+    { path: '/jobs', name: 'jobs', component: JobsView },
     { path: '/item/:id', component: ItemView },
     { path: '/user/:id', component: UserView },
 ];
