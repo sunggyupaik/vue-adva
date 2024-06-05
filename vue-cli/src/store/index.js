@@ -11,6 +11,7 @@ export const store = createStore({
       user: {},
       item: {},
       loading: true,
+      list: [],
     }
   },
   getters: {

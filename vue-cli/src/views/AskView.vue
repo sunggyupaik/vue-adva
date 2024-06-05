@@ -6,18 +6,10 @@
 
 <script>
 import ListItem from '../components/ListItem.vue';
+import ListMixin from '../mixins/ListMixin.js';
 
 export default {
   components: { ListItem },
-  created() {
-    this.$store.commit('SET_LOADING', true);
-
-    setTimeout(() => {
-      this.$store.dispatch('FETCH_ASK')
-        .then(() => {
-          this.$store.commit('SET_LOADING', false);
-        })
-    }, 3000);
-  }
+  mixins: [ ListMixin ],
 }
 </script>
