@@ -1,0 +1,6 @@
+- HOC와 Mixins 차이
+    - HOC는 CreateListView.js에서 정의
+    - ListView.vue로 ListItem.vue를 한번 감싸는 구조
+    - router component에 CreateListView로 기존 component 감싸서 이동
+    - ex) AskView -> ListView -> ListItem
+    - Mixins는 좀 더 직관적으로 공통 부분만 재활용
